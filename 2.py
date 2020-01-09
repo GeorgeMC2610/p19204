@@ -3,7 +3,7 @@ txtfile         = open("2.txt", "r")
 words           = txtfile.read()
 words           = words.split(" ")
 badLetters      = ["f", "c", "k", "r"]
-otherConsonants = ["b", "d", "g", "h", "j", "l", "m", "n", "p", "q", "s", "t", "v", "w", "x", "z"]
+notConsonants   = ["a", "e", "i", "o", "u", "y", ",", ".", "\n"]
 
 for word in words:
     badCounter = 0
@@ -11,8 +11,8 @@ for word in words:
     for letter in word:
         if letter in badLetters:
             badCounter += 1
-        if letter in otherConsonants:
+        elif letter not in notConsonants:
             normalCounter += 1
     
-    if badCounter >= normalCounter:
+    if (badCounter > normalCounter) and (len(word) > 3):
         print("Found bad word: " + word)
