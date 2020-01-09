@@ -2,10 +2,7 @@
 
 x = int(input("Εισάγετε έναν αριθμό --> "))
 
-while len(str(x)) == 1:
-    x = int(input("Το πρόγραμμα δεν δουλεύει με μονοψήφιους αριθμούς. Εισάγετε άλλον --> "))
-
-while len(str(x)) > 1:
+while True:
     print("Αριθμός εισόδου:", x)
     x *= 3
     x += 1
@@ -15,3 +12,5 @@ while len(str(x)) > 1:
         a += int(i)
     x = a
     print("Αριθμός με προσθετημένα ψηφία:", x, "\n")
+    if len(str(x)) == 1:
+        break
