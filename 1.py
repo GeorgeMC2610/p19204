@@ -1,26 +1,27 @@
 print("Η εισαγωγή των λέξεων γίνεται μέσω του αρχείου 1.txt.")
 
-def findBiggestWord(words):
-    biggestWord = words[0]
-    for testWord in words:
-        if len(word) > len(biggestWord):
-            biggestWord = testWord
-
-    
-    return biggestWord
-
-    
-
-
 txtfile = open("1.txt", "r")
 words   = txtfile.read()
-words   = words.split(" ")
+words   = words.split()
 
-biggestWords = ["", "", "", "", ""]
+biggestWords = []
+vowels = ["e", "y", "u", "i", "o", "a"]
+
+#Εύρεση των πέντε μεγαλύτερων λέξεων.
 for i in range(0,5):
-    biggestWords.append(findBiggestWord(words))
+    biggestWord = ""
+    counter = 0
 
-print
+    for testWord in words:
 
+        if len(testWord) > len(biggestWord):
+            biggestWord = testWord 
+            position = counter
+        counter += 1   
+    else:
+        biggestWords.append(biggestWord)
+        words.pop(position)
 
-    
+print("Οι μεγαλύτερες λέξεις είναι:", biggestWords)
+
+print(biggestWords[0][::-1])
