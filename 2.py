@@ -1,9 +1,9 @@
 print("Η είσοδος του κειμένου γίνεται μέσω του αρχείου 2.txt")
 txtfile         = open("2.txt", "r")
 words           = txtfile.read()
-words           = words.split(" ")
+words           = words.split()
 badLetters      = ["f", "c", "k", "r"]
-notConsonants   = ["a", "e", "i", "o", "u", "y", ",", ".", "\n"]
+notConsonants   = ["a", "e", "i", "o", "u", "y", ",", "."]
 
 for word in words:
     badCounter = 0
@@ -15,4 +15,4 @@ for word in words:
             normalCounter += 1
     
     if (badCounter > normalCounter) and (len(word) > 3):
-        print("Found bad word: " + word)
+        print("Found potential bad word: " + word)
