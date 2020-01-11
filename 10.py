@@ -4,15 +4,17 @@ def whatIsMyHand(hand):
     card_numbers = [2,3,4,5,6,7,8,9,"A","J","Q","K"]
     card_types   = ["Diamonds", "Spades", "Hearts", "Clubs"]
 
-    #Ορισμός του χεριού FIVE OF A KIND
+    straight = (card[0][0] )
+
+    #Ορισμός του χεριού ROYAL FLUSH
     for card in hand:
-        if card[i]:
+        if True:
             break
 
 #Ορισμός των καρτών
 card_numbers = [2,3,4,5,6,7,8,9,10,"A","J","Q","K"]
 card_types   = ["Diamonds", "Spades", "Hearts", "Clubs"]
-cards        = ["Joker", "Joker"]
+cards        = []
 
 for number in card_numbers:
     for Type in card_types:
@@ -28,6 +30,9 @@ player2_cards = []
 for i in range(0,5):
     player1_cards += [cards.pop()]
     player2_cards += [cards.pop()]
+
+player1_cards.sort()
+player2_cards.sort()
 
 print("Player 1 Cards:", player1_cards)
 print("Player 2 Cards:", player2_cards)
