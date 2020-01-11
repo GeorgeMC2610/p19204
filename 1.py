@@ -21,7 +21,8 @@ for i in range(0,5):
     else:
         biggestWords.append(biggestWord)
         words.pop(position)
-
 print("Οι μεγαλύτερες λέξεις είναι:", biggestWords)
 
-print(biggestWords[0][::-1])
+for testWord in biggestWords:
+    for letter in testWord:
+        if letter in vowels:
