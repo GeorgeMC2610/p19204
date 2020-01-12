@@ -7,6 +7,7 @@ def whatIsMyHand(hand):
     straight    = (hand[0][0] == (hand[1][0] - 1)) and (hand[1][0] == (hand[2][0] - 1)) and (hand[2][0] == (hand[3][0] - 1)) and (hand[3][0] == (hand[4][0] - 1))
     flush       = (hand[0][1] == hand[1][1]) and (hand[1][1] == hand[2][1]) and (hand[2][1] == hand[3][1]) and (hand[3][1] == hand[4][1]) and (hand[4][1] == hand[0][1])
     royal_flush = (flush) and (straight) and (hand[0][0] == 10)
+    kind_4      = ((hand[0][0] == hand[1][0]) and (hand[1][0] == hand[2][0]) and (hand[2][0] == hand[3][0])) or ((hand[1][0] == hand[2][0]) and (hand[2][0] == hand[3][0]) and (hand[3][0] == hand[4][0]))
 
     #Ορισμός του χεριού Royal Flush (δηλαδή πέντε χαρτιά ίδιου τύπου σε σειρά, ξεκινώντας από το 10 και φτάνοντας στον άσσο)
     if royal_flush:
@@ -15,6 +16,9 @@ def whatIsMyHand(hand):
     #Χέρι 'Straight Flush' (χαρτιά σε σειρά με ίδιο τύπο)
     if (flush) and (straight):
         return "Straight Flush"
+
+    if kind_4:
+        return "Four Of A Kind"
 
     #Ορισμός του χεριού FLUSH (Πέντε ίδιοι τύποι)
     if flush:
