@@ -53,7 +53,7 @@ for i in range(0,5):
 player1_cards.sort()
 player2_cards.sort()
 
-#player1_cards = [(10, 'Clubs'), (11, 'Clubs'), (12, 'Clubs'), (13, 'Clubs'), (14, 'Clubs')]
+player1_cards = [(2, 'Clubs'), (2, 'Spades'), (2, 'Hearts'), (2, 'Diamonds'), (14, 'Clubs')]
 
 print(whatIsMyHand(player1_cards))
 
