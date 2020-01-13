@@ -6,6 +6,7 @@ def whatIsMyHand(hand):
 
     straight    = (hand[0][0] == (hand[1][0] - 1)) and (hand[1][0] == (hand[2][0] - 1)) and (hand[2][0] == (hand[3][0] - 1)) and (hand[3][0] == (hand[4][0] - 1))
     flush       = (hand[0][1] == hand[1][1]) and (hand[1][1] == hand[2][1]) and (hand[2][1] == hand[3][1]) and (hand[3][1] == hand[4][1]) and (hand[4][1] == hand[0][1])
+    full_house  = ((hand[0][0] == hand[1][0]) and (hand[2][0] == hand[3][0]) and (hand[3][0] == hand[4][0])) or ((hand[0][0] == hand[1][0]) and (hand[1][0] == hand[2][0]) and (hand[3][0] == hand[4][0]))
     kind_4      = ((hand[0][0] == hand[1][0]) and (hand[1][0] == hand[2][0]) and (hand[2][0] == hand[3][0])) or ((hand[1][0] == hand[2][0]) and (hand[2][0] == hand[3][0]) and (hand[3][0] == hand[4][0]))
     kind_3      = ((hand[0][0] == hand[1][0]) and (hand[1][0] == hand[2][0])) or ((hand[1][0] == hand[2][0]) and (hand[2][0] == hand[3][0])) or ((hand[2][0] == hand[3][0]) and (hand[3][0] == hand[4][0]))
     kind_2      = ((hand[0][0] == hand[1][0]) or (hand[1][0] == hand[2][0]) or (hand[2][0] == hand[3][0]) or (hand[3][0] == hand[4][0]))
@@ -23,7 +24,7 @@ def whatIsMyHand(hand):
         return "Four Of A Kind"
 
     #Ορισμός χεριού Full House (ένα ζευγάρι + άλλα τρία ίδια χαρτιά)
-    if kind_3 and kind_2:
+    if full_house:
         return "Full House"
 
     #Ορισμός του χεριού FLUSH (Πέντε ίδιοι τύποι)
