@@ -24,5 +24,9 @@ for i in range(0,5):
 print("Οι μεγαλύτερες λέξεις είναι:", biggestWords)
 
 for testWord in biggestWords:
+    emptystring = ""
     for letter in testWord:
-        if letter in vowels:
+        if letter not in vowels:
+            emptystring += letter
+    print(emptystring[::-1])
+                
