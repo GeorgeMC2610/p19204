@@ -23,6 +23,7 @@ for i in range(0,5):
         words.pop(position)
 print("Οι μεγαλύτερες λέξεις είναι:", biggestWords)
 
+print("\nΟι λέξεις ανάποδα και χωρίς φωνήεντα είναι:")
 for testWord in biggestWords:
     emptystring = ""
     for letter in testWord:
