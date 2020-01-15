@@ -94,3 +94,5 @@ random.shuffle(player2_cards)
 
 print("Player 1 Cards:", player1_cards, result1)
 print("Player 2 Cards:", player2_cards, result2)
+
+print(whoWins(""))
