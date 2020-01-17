@@ -71,7 +71,7 @@ counter = 0
 score_1 = 0
 score_2 = 0
 answer = "y"
-while answer == "y":
+while answer == "y" or answer == "yes":
     counter += 1
     #Ορισμός των καρτών
     card_numbers = [2,3,4,5,6,7,8,9,10,11,12,13,14]
