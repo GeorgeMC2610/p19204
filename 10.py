@@ -112,16 +112,18 @@ while answer == "y" or answer == "yes":
     random.shuffle(player1_cards)
     random.shuffle(player2_cards)
 
+    #Ποιός νίκησε;
     if result1[1] > result2[1]:
         score_1 += 1
     elif result1[1] < result2[1]:
         score_2 += 1
 
+    #Εκτύπωση των χαρτιών
     print("Player 1 Cards:", player1_cards, result1[0])
     print("Player 2 Cards:", player2_cards, result2[0])
     print("\nScore:", score_1, "-", score_2)
 
-    
+    #Συνεχίζεται ή όχι το παιχνίδι; (Δέχεται κι άλλες απαντήσεις εκτός από το y και το n)
     answer = input("Play again? y/n: ")
 
 if counter == 1:
