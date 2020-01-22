@@ -1,7 +1,17 @@
 #Εργασία 9 στο Μάθημα 'Εισαγωγή στην Επιστήμη των Υπολογιστών' p19204
+def isNumber(x):
+    while True:
+        try:
+            x = int(x)
+            return x
+        except ValueError:
+            x = input("Παρακαλώ δώστε έναν έγκυρο αριθμό: ")
 
-x = int(input("Εισάγετε έναν αριθμό --> "))
-print("")
+while True:
+    x = input("Δώστε έναν θετικό αριθμό: ")
+    x = isNumber(x)
+    if x > 0:
+        break
 
 while True:
     print("Αριθμός εισόδου:", x)
