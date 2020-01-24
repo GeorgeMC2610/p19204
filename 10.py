@@ -23,7 +23,7 @@ def whatIsMyHand(hand):
     if (flush) and (straight):
         return ["Straight Flush", 8]
 
-    #Χέρι Four Of A Kind (self-explanatory)
+    #Χέρι Four Of A Kind
     if kind_4:
         return ["Four Of A Kind", 7]
 
@@ -51,7 +51,8 @@ def whatIsMyHand(hand):
         return ["Pair", 1]
 
     return [None, 0]
-    
+
+#Η συνάρτηση, η οποία ευθύνεται για την αναπαράσταση των χαρτιών σε σωστή μορφή  
 def cardBeautifier(hand):
     for card in hand:
         if card[0] == 11:
